@@ -1,0 +1,5 @@
+<?php
+header("Content-Type: text/plain");
+$text = @_GET['text'];
+echo preg_replace('/^ +| +$|( ) +/m', '$1', $text);
+?>
