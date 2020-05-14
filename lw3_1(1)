@@ -5,6 +5,6 @@ function getGETParameter(string $name): ?string
 }
 $query = getGETParameter('text');
 $query = trim($query);
-$query = preg_replace('/\s+/', ' ', __________ );
+$query = preg_replace('/\s+/', ' ', $query);
 header("Content-Type: text/plain");
 echo $query;
