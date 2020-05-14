@@ -48,7 +48,7 @@ BEGIN{GetValue}
       DO
         BEGIN
           READ(FileMiddle, Ch);
-          IF Ch <> '=' 
+          IF Ch <> '&' 
           THEN 
             Answer := Answer + Ch 
           ELSE 
@@ -58,10 +58,10 @@ BEGIN{GetValue}
   GetQueryStringParameter := Answer
 END;{GetValue}
 
-BEGIN{GetHash}
+BEGIN
   WRITELN('Content-Type: text/plain');
   WRITELN;
   WRITELN('first_name: ', GetQueryStringParameter('first_name'));
   WRITELN('last_name: ', GetQueryStringParameter('last_name'));
   WRITELN('age: ', GetQueryStringParameter('age'))
-END.{GetHash}
+END.
